@@ -65,8 +65,9 @@ jobs:
           path: docs
 
   deploy:
-    # Only deploy on main branch, not on PRs
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    # Only deploy on main branch, not on PRs, and only on the course repo
+    # (forks don't have Pages enabled, so this would 404 otherwise)
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && github.repository == 'nasaul/mineria_datos'
     needs: render
     runs-on: ubuntu-latest
     environment:
