@@ -16,8 +16,8 @@ book:
     - 03_crisp_dm.md
     - 04_evaluacion_modelos.md
     - 05_arboles.qmd
-    #- 06_bosques.qmd
-    #- 07_boosting.qmd
+    - 06_bosques.qmd
+    - 07_boosting.qmd
     #- 08_redes_neuronales.qmd
     #- proyecto_final.md
   open-graph: true
